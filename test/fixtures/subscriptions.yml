@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  due_date: 2022-12-25
+  starting_date: 2022-12-25
+  frequency: MyString
+  user: one
+
+two:
+  price: 1
+  due_date: 2022-12-25
+  starting_date: 2022-12-25
+  frequency: MyString
+  user: two

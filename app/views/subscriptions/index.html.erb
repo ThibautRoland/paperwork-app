@@ -1,0 +1,12 @@
+<div class="container">
+  <h2 class="text-center">Here are all your subscriptions:</h2>
+
+  <% @subscriptions.each do |subscription| %>
+    <div class="card d-flex flex-column">
+      <h4><%= subscription.name %></h4>
+      <p><%= subscription.price %></p>
+      <p><%= subscription.frequency %></p>
+      <p><%= subscription.starting_date %></p>
+    </div>
+  <% end %>
+</div>
