@@ -1,12 +1,21 @@
 <div class="container">
   <h2 class="text-center">Here are all your subscriptions:</h2>
+  <%= link_to "Add a subscription", new_subscription_path, class:"btn btn-primary" %>
 
   <% @subscriptions.each do |subscription| %>
-    <div class="card d-flex flex-column">
-      <h4><%= subscription.name %></h4>
-      <p><%= subscription.price %></p>
-      <p><%= subscription.frequency %></p>
-      <p><%= subscription.starting_date %></p>
+    <div class="card d-flex pt-3 px-3 my-3">
+      <h4 class="text-center border-bottom"><%= subscription.name %></h4>
+      <div class="d-flex justify-content-between">
+        <div class="flex-column">
+          <p><%= subscription.price %></p>
+          <p><%= subscription.frequency %></p>
+          <p><%= subscription.starting_date %></p>
+        </div>
+        <div class="flex-column">
+          <p><%= link_to "Edit", edit_subscription_path(subscription), class:"btn btn-secondary" %></p>
+          <p><%= link_to "delete", subscription_path(subscription), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
