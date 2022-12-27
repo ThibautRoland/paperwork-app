@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="d-flex col-4 offset-4">
+    <%= simple_form_for (@subscription) do |f| %>
+      <%= f.input :name, label: false, :placeholder => 'name' %>
+      <%= f.input :price, label: false, :placeholder => 'price' %>
+      <%= f.input :frequency, label: false, :placeholder => 'frequency' %>
+      <%= f.input :starting_date, label: false, :placeholder => 'starting_date' %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
