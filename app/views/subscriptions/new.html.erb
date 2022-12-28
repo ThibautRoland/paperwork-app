@@ -1,4 +1,5 @@
 <div class="container">
+  <%= link_to "go back", subscriptions_path, class:"btn" %>
   <div class="d-flex col-4 offset-4">
     <%= simple_form_for (@subscription) do |f| %>
       <%= f.input :name, label: false, :placeholder => 'name' %>
